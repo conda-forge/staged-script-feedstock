@@ -11,16 +11,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - poetry-core
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - reverse-argparse
     - rich
     - tenacity
@@ -32,6 +32,7 @@ test:
     - staged_script
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   description: |
