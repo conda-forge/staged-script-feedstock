@@ -1,12 +1,12 @@
 {% set name = "staged-script" %}
-{% set version = "2.0.4" %}
+{% set version = "2.0.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  sha256: 7ecea821ee3859c9cf302b3a552d449e93f90be9d9469c0f8a68fe6870a78ea5
+  sha256: b1ae2bd4496dfe946e37c0b3ded1388fe25a0305f6ef6dc987902d7e85a3991a
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/staged_script-{{ version }}.tar.gz
 
 build:
